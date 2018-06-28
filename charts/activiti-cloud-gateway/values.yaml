@@ -17,6 +17,7 @@ service:
   internalPort: 8080
   annotations:
     fabric8.io/expose: "false"
+   
 resources:
   limits:
     memory: 768Mi
@@ -36,7 +37,7 @@ readinessProbe:
 terminationGracePeriodSeconds: 10
 
 ingress:
-  enabled: true
+  enabled: false
   hostName: gw.jx-staging.activiti.envalfresco.com
 
   path: /
