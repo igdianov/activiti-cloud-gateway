@@ -14,14 +14,14 @@
   <properties>
     <java.version>1.8</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
     <spring-cloud.version>Finchley.RC2</spring-cloud.version>
     <spring.cloud.k8s.version>0.3.0.RC1</spring.cloud.k8s.version>
     <spring.boot.version>2.0.2.RELEASE</spring.boot.version>
   </properties>
   <dependencyManagement>
-		<dependencies>
+    <dependencies>
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
@@ -29,13 +29,13 @@
         <scope>import</scope>
         <type>pom</type>
       </dependency>
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>${spring-cloud.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring-cloud.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
       <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-kubernetes-dependencies</artifactId>
@@ -43,8 +43,8 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-		</dependencies>
-	</dependencyManagement>
+    </dependencies>
+  </dependencyManagement>
   <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -70,6 +70,23 @@
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-kubernetes-ribbon</artifactId>
     </dependency>
+    <!--
+    <dependency>
+      <groupId>org.activiti.cloud</groupId>
+      <artifactId>activiti-cloud-app-service</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-tomcat</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-config</artifactId>
+    </dependency>
+    -->
+    <!--
     <dependency>
       <groupId>org.activiti.cloud</groupId>
       <artifactId>activiti-cloud-services-query-graphql-ws</artifactId>
@@ -96,6 +113,7 @@
         </exclusion>
       </exclusions>
     </dependency>
+    -->
   </dependencies>
   <build>
     <plugins>
